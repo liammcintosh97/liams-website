@@ -6,6 +6,9 @@ frontend:
         - npm i
     build:
       commands:
+        - echo "HOST=$HOST" >> .env.local
+        - echo "COGNITO_POOL_ID=$COGNITO_POOL_ID" >> .env.local
+        - echo "COGNITO_CLIENT_ID=$COGNITO_CLIENT_ID" >> .env.local
         - npm run build
   artifacts:
     baseDirectory: .next
