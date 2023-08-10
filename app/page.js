@@ -2,8 +2,6 @@ import "./globals.scss"
 import styles from './page.module.scss'
 import EventCard from "./components/EventCard"
 
-export const runtime = 'edge'
-
 export const metadata = {
   title: 'Home',
 }

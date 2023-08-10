@@ -3,7 +3,6 @@ async function getData(slug) {
   return res.json()
 }
 
-export const runtime = 'edge'
 
 // or Dynamic metadata
 export async function generateMetadata({ params }) {

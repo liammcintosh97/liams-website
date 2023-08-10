@@ -2,7 +2,6 @@ import styles from './page.module.scss'
 import LogoutForm from '../components/logoutForm'
 import AdminActions from '../components/adminActions'
 
-export const runtime = 'edge'
 
 export const metadata = {
   title: 'Admin',
