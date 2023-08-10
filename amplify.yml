@@ -3,12 +3,10 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm i
+        - npm ci
     build:
       commands:
-        - echo "HOST=$HOST" >> .env.local
-        - echo "COGNITO_POOL_ID=$COGNITO_POOL_ID" >> .env.local
-        - echo "COGNITO_CLIENT_ID=$COGNITO_CLIENT_ID" >> .env.local
+        - env | grep -e HOST -e COGNITO_POOL_ID -e COGNITO_CLIENT_ID >> .env.production
         - npm run build
   artifacts:
     baseDirectory: .next
