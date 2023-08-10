@@ -18,8 +18,10 @@ export default function LogoutForm(){
       })
     }
 
-    const res = await fetch(`/api/auth/logout`,options)
+    const url = `/api/auth/logout`
+    const res = await fetch(url,options)
     const data = await res.json()
+    console.log(`POST ${url} - response`,data)
 
     if(data.success) authHandler.logout()
     else console.error(data.error)

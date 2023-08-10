@@ -61,14 +61,3 @@ export async function PATCH(request){
     });
   }
 }
-
-async function revalidate(){
-  const options = {
-    method: "POST"
-  }
-  console.log("Revalidating Home...")
-  const res = await fetch(`/api/revalidate`,options)
-  const data = await res.json()
-
-  return data
-}

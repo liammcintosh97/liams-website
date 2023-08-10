@@ -7,13 +7,7 @@ export const metadata = {
   title: 'Admin',
 }
 
-async function getData() {
-  const res = await fetch(`${process.env.HOST}/api/events`)
-  return res.json()
-}
-
 export default async function Page() {
-  //const data = await getData()
 
   return (
     <div>

@@ -7,8 +7,11 @@ export const metadata = {
 }
 
 async function getData() {
-  const res = await fetch(`${process.env.HOST}/api/events`)
-  return res.json()
+  const url = `${process.env.HOST}/api/events`
+  const res = await fetch(url)
+  const json = await res.json()
+  console.log(`GET ${url} - response`,json)
+  return json
 }
 
 export default async function Page() {

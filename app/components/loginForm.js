@@ -19,8 +19,10 @@ export default function LoginForm(){
       })
     }
 
-    const res = await fetch(`/api/auth/login`,options)
+    const url = `/api/auth/login`
+    const res = await fetch(url,options)
     const data = await res.json()
+    console.log(`POST ${url} - response`,data)
     authHandler.login(data)
   }
 

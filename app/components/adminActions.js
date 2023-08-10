@@ -12,8 +12,10 @@ export default function AdminActions(){
       method: "POST"
     }
     console.log("Revalidating Home...")
-    const res = await fetch(`/api/revalidate`,options)
+    const url = `/api/revalidate`
+    const res = await fetch(url,options)
     const data = await res.json()
+    console.log(`POST ${url} - response`,data)
   }
 
   async function onSubmitTitleUpdate(event){
@@ -27,8 +29,10 @@ export default function AdminActions(){
       })
     }
 
-    const res = await fetch(`/api/events/${slug}`,options)
-    const data = await res.json()
+    const url = `${process.env.HOST}/api/events/${slug}`
+    const res = await fetch(url,options)
+    const json = await res.json()
+    console.log(`PATCH ${url} - response`,json)
   }
   
   return (

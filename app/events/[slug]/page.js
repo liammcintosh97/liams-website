@@ -1,6 +1,9 @@
 async function getData(slug) {
-  const res = await fetch(`${process.env.HOST}/api/events/${slug}`)
-  return res.json()
+  const url = `${process.env.HOST}/api/events/${slug}`
+  const res = await fetch(url)
+  const data = await res.json()
+  console.log(`GET ${url} - response`,data)
+  return data
 }
 
 
