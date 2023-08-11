@@ -2,7 +2,15 @@ import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import { DynamoDBDocumentClient, GetCommand, UpdateCommand } from "@aws-sdk/lib-dynamodb";
 import { NextResponse } from 'next/server'
 
-const client = new DynamoDBClient({});
+const config = {
+  region: process.env.REGION,
+  credentials: {
+    accessKeyId: process.env.ACCESS_KEY_ID,
+    secretAccessKey: process.env.SECRET_ACCESS_KEY,
+  },
+};
+
+const client = new DynamoDBClient(config);
 const docClient = DynamoDBDocumentClient.from(client);
 
 export async function GET(request) {
