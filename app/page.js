@@ -1,12 +1,23 @@
 import "./globals.scss"
 import styles from './page.module.scss'
 import EventCard from "./components/EventCard"
+import { openGraphImage, openGraphBasicFields} from './shared-metadata'
+
+const title = 'Home'
+const description = "The home page of Liam's website"
 
 export const metadata = {
-  title: 'Home',
+  title: title,
+  description: description,
+  openGraph:{
+    ...openGraphImage,
+    ...openGraphBasicFields,
+    title: title,
+    description: description
+  }
 }
 
-async function getData() {
+export async function getData() {
   const url = `${process.env.HOST}/api/events`
   const res = await fetch(url)
   const json = await res.json()

@@ -1,3 +1,5 @@
+import { openGraphImage, openGraphBasicFields } from '../../shared-metadata'
+
 async function getData(slug) {
   const url = `${process.env.HOST}/api/events/${slug}`
   const res = await fetch(url)
@@ -14,6 +16,13 @@ export async function generateMetadata({ params }) {
 
   return {
     title: event.title,
+    description: event.description,
+    openGraph:{
+      ...openGraphImage,
+      ...openGraphBasicFields,
+      title: event.title,
+      description: event.description
+    }
   }
 }
 
