@@ -1,6 +1,6 @@
 import {AuthHandler} from '../components/authHandler'
 
-import { basicFields, robots } from "./shared-metadata"
+import { basicFields, robots } from "../shared-metadata"
 
 const defaultTitle = 'Admin'
 
