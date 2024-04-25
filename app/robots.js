@@ -3,7 +3,6 @@ export default function robots() {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: '/admin/',
     },
     sitemap: `${process.env.HOST}/sitemap.xml`,
   }

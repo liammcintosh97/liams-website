@@ -37,35 +37,3 @@ export async function GET(request) {
     });
   }
 };
-
-
-export async function PATCH(request){
-  const split = request.url.split("/")
-  const slug = split[split.length-1]
-  const body = await request.json()
-
-  const command = new UpdateCommand({
-    TableName: "liams-website-events",
-    Key: {
-      slug: slug
-    },
-    UpdateExpression: "set title = :title",
-    ExpressionAttributeValues: {
-      ":title": body.title,
-    },
-    ReturnValues: "ALL_NEW",
-  });
-
-  try{
-    const response = await docClient.send(command);
-    return NextResponse.json({
-      success: true,
-      response: response
-    });
-  }catch(e){
-    return NextResponse.json({
-      success: false,
-      error: e
-    });
-  }
-}

@@ -1,9 +1,7 @@
 import { getData } from './page';
  
 const routes = [
-  "",
-  "admin",
-  "/admin/login",
+  ""
 ]
 
 export default async function sitemap() {
