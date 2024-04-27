@@ -6,7 +6,7 @@ frontend:
         - npm ci
     build:
       commands:
-        - env | grep -e HOST -e COGNITO_POOL_ID -e COGNITO_CLIENT_ID -e REGION -e ACCESS_KEY_ID -e SECRET_ACCESS_KEY>> .env.production
+        - env | grep -e HOST -e REGION -e ACCESS_KEY_ID -e SECRET_ACCESS_KEY>> .env.production
         - npm run build
   artifacts:
     baseDirectory: .next
