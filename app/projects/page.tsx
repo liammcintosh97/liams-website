@@ -1,5 +1,4 @@
 /** @module RootPage */
-import "../globals.scss"
 import ProjectCard from "../components/ProjectCard"
 import { openGraphImage, openGraphBasicFields} from '../shared-metadata'
 import React from "react"

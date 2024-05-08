@@ -2,6 +2,8 @@
 import React from "react"
 import { basicFields } from "./shared-metadata"
 import { RootLayoutProps } from "./type"
+import Nav from "./components/Nav"
+import Footer from "./components/Footer"
 
 const defaultTitle = 'Liam\'s Website'
 
@@ -19,12 +21,18 @@ export const metadata = {
  * @param {RootLayoutProps} props - The properties of the RootLayout component
  * @returns {JSX.Element}
  */
-export default function RootLayout({
+export default function Layout({
   children 
 }: RootLayoutProps): JSX.Element {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Nav />
+        <main>
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   )
 }

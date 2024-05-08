@@ -1,6 +1,49 @@
-html,
+@import './variables.module.scss';
+
+html {
+  overflow: hidden;
+}
+
 body {
-  margin:0px;
-  max-width: 100vw;
+  overflow: auto;
+}
+
+body, html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $surface-light;
+  color: $surface-very-dark;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 55px);
+}
+
+*::selection{
+  background-color: $primary-light;
+} 
+
+.page{
+  padding: 15px;
+}
+
+a{
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  color: $surface-very-dark;
+
+  &:hover{
+    color: $secondary-dark;
+  }
+}
+ 
+h1 {
+  font-family: var(--font-oswald);
 }
 

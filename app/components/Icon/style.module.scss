@@ -1,0 +1,16 @@
+@import '../../variables.module.scss';
+
+.icon{
+  width: 2vw;
+  height: 2vw;
+  min-width: 25px;
+  min-height: 25px;
+  max-width: 40px;
+  max-height: 40px;
+  display: inline-block;
+  background: $primary;
+
+  &:hover{
+    background: $secondary-dark;
+  }
+}

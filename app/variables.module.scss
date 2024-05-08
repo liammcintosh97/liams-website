@@ -1,0 +1,27 @@
+// hce
+$primary-light: #8ECAE6;
+$primary: #219EBC;
+$primary-dark: #023047;
+
+$secondary-light: #FFDE8A;
+$secondary: #FFB703;
+$secondary-dark: #FB8500;
+
+$surface-light: #F5F5F5;
+$surface: #E6E6E6;
+$surface-medium: #D2D2D2;
+$surface-dark: #A3A3A3;
+$surface-very-dark: #2E2E2E;
+ 
+:export {
+  primaryLight: $primary-light;
+  primary: $primary;
+  primaryDark: $primary-dark;
+  secondaryLight: $secondary-light;
+  secondary: $secondary;
+  secondaryDark: $secondary-dark;
+  surface-light: $surface-light;
+  surface: $surface;
+  surface-medium: $surface-medium;
+  surface-very-dark: $surface-very-dark
+}
