@@ -13,4 +13,4 @@ export interface EventsQuery {
   eventType: EventType
 }
 
-export type EventType = 'certificate' | 'employment' | 'acknowledgement'
+export type EventType = 'certificate' | 'employment' | 'acknowledgement' | 'project'
