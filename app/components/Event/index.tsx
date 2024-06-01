@@ -3,6 +3,7 @@ import React from 'react'
 import { getEvent } from '../../util/Events'
 import { EventMetaData, EventMetaDataProps, EventProps } from './type'
 import { openGraphBasicFields, openGraphImage } from '../../shared-metadata'
+import parse from 'html-react-parser';
 
 /**
  * Generates the meta data for the Event
@@ -38,25 +39,29 @@ export default async function Event({
 }: EventProps): Promise<JSX.Element>{
   const event = await getEvent(slug)
 
-   return (
+  function isHTML(string: string){
+    return /<\/?[a-z][\s\S]*>/i.test(string)
+  }
+
+  return (
+  <div>
+    <h1>{event.title}</h1>
     <div>
-      <h1>{event.title}</h1>
-      <div>
-        <label>Where</label>
-        <p>{event.where}</p>
-      </div>
-      <div>
-        <label>Start</label>
-        <p>{event.start}</p>
-      </div>
-      <div>
-        <label>End</label>
-        <p>{event.end}</p>
-      </div>
-      <div>
-        <label>Description</label>
-        <p>{event.description}</p>
-      </div>
+      <label>Where</label>
+      <p>{event.where}</p>
     </div>
-   )
+    <div>
+      <label>Start</label>
+      <p>{event.start}</p>
+    </div>
+    <div>
+      <label>End</label>
+      <p>{event.end}</p>
+    </div>
+    <div>
+      <label>Description</label>
+      {isHTML(event.description) ? parse(event.description) : <p>{event.description}</p>}
+    </div>
+  </div>
+  )
 }
