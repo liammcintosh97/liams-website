@@ -10,7 +10,8 @@ import { EventsProps } from "./type"
  * @returns {Promise<JSX.Element>}
  */
 export default async function Events({
-  eventType
+  eventType,
+  parentPath
 }: EventsProps ): Promise<JSX.Element> {
   const events = await getEvents({eventType})
   console.log(events, events)
@@ -20,7 +21,7 @@ export default async function Events({
         return(
           <Link
             key={`event_link_${e.eventType}s_${e.slug}`}
-            href={`/${e.eventType}s/${e.slug}`}
+            href={`${parentPath}/${e.slug}`}
           >
             <h3>{e.title}</h3>
           </Link>

@@ -21,6 +21,9 @@ function Nav(): JSX.Element{
             </Link>
           </li>
           <li>
+            <Link className={oswald.className} href={`/employment`}>Employment</Link>
+          </li>
+          <li>
             <Link className={oswald.className} href={`/certificates`}>Certificates</Link>
           </li>
           <li>

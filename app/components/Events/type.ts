@@ -4,6 +4,8 @@ import { EventType } from "../../util/Events/type";
 export interface EventsProps {
   /** The type of Event */
   eventType: EventType
+  /** The full parent path to the Event*/
+  parentPath: string
 }
 
 /** The request body sent to the get Events api route */

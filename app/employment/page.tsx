@@ -1,10 +1,10 @@
-/** @module CertificatesPage */
+/** @module EmploymentPage */
 import Events from '../components/Events'
 import { openGraphImage, openGraphBasicFields} from '../shared-metadata'
 import React from "react"
 
-const title = 'Certificates'
-const description = "Liam Alton's Certificates"
+const title = 'Employment'
+const description = "Liam Alton's Employment"
 
 export const metadata = {
   title: title,
@@ -18,14 +18,14 @@ export const metadata = {
 }
 
 /**
- * The Certificates page component
+ * The Employment page component
  * @returns {Promise<JSX.Element>}
  */
 export default async function Page(): Promise<JSX.Element>{
   return (
     <Events
-      eventType='certificate'
-      parentPath='certificates'
+      eventType='employment'
+      parentPath='employment'
     />
   )
 }
