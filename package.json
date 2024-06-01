@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "stop": "killall -KILL node",
     "lint": "next lint",
     "create-docs": "jsdoc -c jsdoc.conf.json",
     "clean-docs": "rm -rf docs/*",

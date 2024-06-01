@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next/types";
-import { getProjects } from "./util/projects";
+import { getProjects } from "./util/Events";
 
 const routes = [
   ""

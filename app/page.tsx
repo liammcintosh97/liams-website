@@ -26,7 +26,7 @@ export const metadata = {
 export default async function Page(): Promise<JSX.Element>{
   return (
     <div className={"page " + styles.root}>
-      <h1 className={`${styles.title} ${oswald.className}`}>Liam Alton</h1>
+      <h1 className={`${styles.title} ${oswald.className}`}>LIAM ALTON</h1>
       <div className={styles.subHeader}>
         <h2 className={playfair_display.className}>Software Engineer</h2>
         <p>|</p>
