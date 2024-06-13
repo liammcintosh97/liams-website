@@ -1,9 +1,11 @@
 /** @module RootLayout */
+import "./globals.scss"
 import React from "react"
 import { basicFields } from "./shared-metadata"
 import { RootLayoutProps } from "./type"
 import Nav from "./components/Nav"
 import Footer from "./components/Footer"
+import { oswald ,playfair_display} from './fonts' 
 
 const defaultTitle = 'Liam\'s Website'
 
@@ -25,7 +27,7 @@ export default function Layout({
   children 
 }: RootLayoutProps): JSX.Element {
   return (
-    <html lang="en">
+    <html lang="en" className={`${oswald.variable} ${playfair_display.variable}`}>
       <body>
         <Nav />
         <main>

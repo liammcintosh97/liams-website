@@ -23,9 +23,11 @@ export const metadata = {
  */
 export default async function Page(): Promise<JSX.Element>{
   return (
-    <Events
-      eventType='certificate'
-      parentPath='certificates'
-    />
+    <div className='page'>
+      <Events
+        eventType='certificate'
+        parentPath='certificates'
+      />
+    </div>
   )
 }

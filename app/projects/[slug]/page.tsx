@@ -26,8 +26,10 @@ export default async function Page({
   params
 }: EventPageProps): Promise<JSX.Element>{
    return (
-    <Event
-      slug={params.slug}
-    />
+    <div className='page'>
+      <Event
+        slug={params.slug}
+      />
+    </div>
    )
 }

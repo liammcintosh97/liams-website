@@ -38,7 +38,7 @@ export default async function Page(): Promise<JSX.Element>{
             placeholder="blur"
           />
           <div>
-            <h1 className={oswald.className}>ABOUT ME</h1>
+            <h1>ABOUT ME</h1>
             <div className={styles.subHeader}>
               <h2 className={playfair_display.className}>Software Engineer</h2>
               <p>|</p>

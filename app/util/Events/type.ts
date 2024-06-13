@@ -1,11 +1,11 @@
 export interface Event {
-  slug: string,
-  description: string,
-  start: string,
-  end: string,
-  title: string,
-  eventType: EventType,
-  where: string
+  slug?: string,
+  description?: string,
+  start?: string,
+  end?: string,
+  title?: string,
+  eventType?: EventType,
+  where?: string
 }
 
 export interface EventsQuery {
