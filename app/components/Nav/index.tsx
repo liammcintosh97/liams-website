@@ -12,8 +12,12 @@ import { oswald } from '../../fonts'
  */
 function Nav(): JSX.Element{
   return (
-    <div className={styles.nav}>
+    <div className={styles.navContainer}>
       <nav>
+        <Icon 
+          className={styles.burgerIcon}
+          url='/icons/burger-menu-icon.svg'
+        />
         <ul>
           <li>
             <Link href="/">

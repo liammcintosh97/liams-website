@@ -1,42 +1,72 @@
 @import '../../variables.module.scss';
 
-.nav {
+.navContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 
-  nav{
-    padding: 15px;
-    background-color: $surface;
-    border-bottom: 1px solid $surface-medium;
-    z-index: 0;
-    width: calc(100% - 30px);
+  nav {
+    width: 100%;
 
-    ul {
+    .burgerIcon{
+      display: none;
+      margin: 1em;
+    }
+  
+    ul{
       display: flex;
+      flex-direction: row;
+      margin: 0px;
+      padding: 15px;
+      z-index: 1;
+      background-color: $surface;
+      border-bottom: solid 1px $surface-medium;
       gap: 1em;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    li{
-      display: flex;
-      align-items: center;
-    }
-
-    &:visited{
-      color:  $surface-very-dark
+  
+      li{
+        display: inline-block;
+      }
     }
 
     a{
       font-weight: 400;
-      display: flex;
-      align-items: center;
     }
   }
+}
 
+@media (max-width: 550px) {
+
+  .navContainer{
+    nav{
+      display: unset;
+
+      .burgerIcon{
+        display: inline-block; 
+      }
+
+      &:hover ul{
+        transition: 1s;
+        left: 0;
+      }
+
+      ul{
+        position: fixed;
+        background-color: $surface;
+        border-right: solid 1px $surface-medium;
+        border-bottom: unset ;
+        display: unset;
+        height: 100vh;
+        padding: 1em;
+        left: -100%;
+        transition: 1s;
+
+        li{
+          display: block;
+          margin: 0.5em;
+        }     
+      }
+    }
+  }
 }
 

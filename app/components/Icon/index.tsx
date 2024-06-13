@@ -9,11 +9,15 @@ import { IconProps } from './type'
  * @returns {JSX.Element}
  */
 function Icon({
-  url
+  url,
+  className
 }: IconProps): JSX.Element{
+  let _className = styles.icon
+  if (className !== undefined) _className += ' ' + className
+
   return (
    <div 
-      className={styles.icon}
+      className={_className}
       style={{
         mask: `url('${url}')`,
         maskSize: 'cover'
