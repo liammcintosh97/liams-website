@@ -4,6 +4,7 @@ import styles from './styles.module.scss'
 import { openGraphImage, openGraphBasicFields} from './shared-metadata'
 import React from "react"
 import { playfair_display } from './fonts'
+import SubHeader from './components/SubHeader'
 
 const title = 'Home'
 const description = "The home page of Liam's website"
@@ -27,13 +28,7 @@ export default async function Page(): Promise<JSX.Element>{
   return (
     <div className={"page " + styles.root}>
       <h1 className={styles.title}>LIAM ALTON</h1>
-      <div className={styles.subHeader}>
-        <h2 className={playfair_display.className}>Software Engineer</h2>
-        <p>|</p>
-        <h2 className={playfair_display.className}>IT Professional</h2>
-        <p>|</p>
-        <h2 className={playfair_display.className}>Game Designer</h2>
-      </div>
+      <SubHeader/>
     </div>
   )
 }

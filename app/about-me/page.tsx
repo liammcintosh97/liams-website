@@ -2,8 +2,8 @@
 import { openGraphImage, openGraphBasicFields} from '../shared-metadata'
 import React from "react"
 import styles from './styles.module.scss'
-import { oswald, playfair_display} from '../fonts'
 import Image from 'next/image'
+import SubHeader from '../components/SubHeader'
 
 const title = 'About Me'
 const description = "About Liam Alton"
@@ -37,15 +37,9 @@ export default async function Page(): Promise<JSX.Element>{
             blurDataURL="data:..."
             placeholder="blur"
           />
-          <div>
+          <div className={styles.title}>
             <h1>ABOUT ME</h1>
-            <div className={styles.subHeader}>
-              <h2 className={playfair_display.className}>Software Engineer</h2>
-              <p>|</p>
-              <h2 className={playfair_display.className}>IT Professional</h2>
-              <p>|</p>
-              <h2 className={playfair_display.className}>Game Designer</h2>
-            </div>
+            <SubHeader className={styles.subHeader}/>
           </div>
         </header>
         <p>With near 5 years of professional experience, I’ve built a robust skillset expanding a variety of fields from Software Engineering, IT to Games Design.</p>

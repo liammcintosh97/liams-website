@@ -1,0 +1,22 @@
+@import '../../variables.module.scss';
+
+.subHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h2{
+    font-size: calc(8px + 1.6vw);
+    font-weight: 400;
+    margin: 0;
+    font-family: var(--font-playfair-display);
+  }
+  p{
+    font-size: calc(6px + 1.5vw);
+    margin: 0 1em 0 1em;
+    padding: 0;
+    color: $secondary-dark;
+  }
+}
