@@ -25,6 +25,7 @@ export default async function Page(): Promise<JSX.Element>{
   return (
     <div className='page'>
       <Events
+        title="Employment"
         eventType='employment'
         parentPath='employment'
       />

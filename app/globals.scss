@@ -11,7 +11,6 @@ body {
 body, html {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -23,6 +22,7 @@ body, html {
 
 main{
   display: flex;
+  flex: 1;
   flex-direction: column;
 }
 
@@ -31,7 +31,7 @@ main{
 } 
 
 .page{
-  padding: 15px;
+  padding: 30px;
 }
 
 a{

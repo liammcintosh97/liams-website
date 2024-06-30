@@ -13,27 +13,33 @@ import { oswald, playfair_display } from "../../fonts"
  */
 export default async function Events({
   eventType,
-  parentPath
+  parentPath,
+  title
 }: EventsProps ): Promise<JSX.Element> {
   const events = await getEvents({eventType})
 
   return (
     <div className={styles.events}>
-      {events.map((e)=>{
-        return(
-          <Link
-            className={styles.event}
-            key={`event_link_${e.eventType}s_${e.slug}`}
-            href={`${parentPath}/${e.slug}`}
-          >
-            <h2>{e.title}</h2>
-            <div className='sub-header'>
-              <p>{e.where}</p>
-              <p>{parseDateRange(e.start, e.end)}</p>
-            </div>
-          </Link>
-        )
-      })}
+      <h1>{title}</h1>
+      <ul>
+        {events.map((e)=>{
+          return(
+            <li key={`event_link_${e.eventType}s_${e.slug}`}>
+              <Link
+                className={styles.event}
+                href={`${parentPath}/${e.slug}`}
+              >
+                <div className={styles.eventLine}>
+                  <p className={styles.eventTitle}>{e.title}</p>
+                  <p className={styles.eventBreak}>|</p>
+                  <p className={styles.eventLocation}>{e.where}</p>
+                </div>    
+                <p className={styles.eventDate}>{parseDateRange(e.start, e.end)}</p>
+              </Link>
+            </li>
+          )
+        })}
+      </ul>
     </div>
   )
 }
@@ -41,7 +47,7 @@ export default async function Events({
 export function parseDateRange(start?: string, end?: string){
   if (start === undefined && end === undefined) return ''
   if (start === end) return start
-  if (end === '') `${start} - present`
+  if (end === '') return `${start} - Present`
   
   return `${start} - ${end}`
 }
