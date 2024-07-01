@@ -8,6 +8,8 @@
   text-align: center;
 
   h2{
+    text-transform: capitalize;
+    color: $surface-very-dark;
     font-size: calc(8px + 1.6vw);
     font-weight: 400;
     margin: 0;

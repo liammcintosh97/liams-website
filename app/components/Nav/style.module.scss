@@ -25,11 +25,16 @@
       gap: 1em;
   
       li{
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
     }
 
     a{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       font-weight: 400;
     }
   }

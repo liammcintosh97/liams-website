@@ -20,7 +20,7 @@ export default async function Events({
 
   return (
     <div className={styles.events}>
-      <h1>{title}</h1>
+      <h2>{title}</h2>
       <ul>
         {events.map((e)=>{
           return(
@@ -31,10 +31,8 @@ export default async function Events({
               >
                 <div className={styles.eventLine}>
                   <p className={styles.eventTitle}>{e.title}</p>
-                  <p className={styles.eventBreak}>|</p>
-                  <p className={styles.eventLocation}>{e.where}</p>
+                  <p className={styles.eventDate}>{parseDateRange(e.start, e.end)}</p>
                 </div>    
-                <p className={styles.eventDate}>{parseDateRange(e.start, e.end)}</p>
               </Link>
             </li>
           )

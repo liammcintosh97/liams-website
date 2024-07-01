@@ -5,10 +5,17 @@
   width: 100%;
 
   ul{
-    padding: 0;
-    list-style-type: none;
+    padding-left: 20px;
 
     li{
+      &::marker {
+        color: $primary;
+      }
+
+      &:hover::marker{
+        color: $secondary-dark
+      }
+
       &:not(:last-child){
         margin-bottom: 1em;
       }
@@ -18,44 +25,28 @@
       }
     }
   }
-
-  h1{
-    margin: 0;
-    color: $primary
-  }
-
-}
-
-.eventDate{
-  color: $surface-dark;
-  font-size: 16px;
-  margin: 0px;
-  font-weight: 600;
 }
 
 .eventLine{
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1em;
+  gap: 0.5em;
 
   *{
     height: 100%;
     margin: 0px;
-    text-align: center;
   }
 }
 
 .eventTitle{
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
 }
 
-.eventLocation{
-  font-size: 16px;
+.eventDate{
+  color: $surface-dark;
+  font-size: 12px;
+  margin: 0px;
   font-weight: 400;
-}
-
-.eventBreak{
-  color: $secondary-dark
 }
