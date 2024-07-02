@@ -1,0 +1,17 @@
+@import '../../variables.module.scss';
+
+.event{
+  max-width: 800px;
+}
+
+.subHeader{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  p{
+    margin: 0;
+    color: $surface-dark;
+  }
+
+}

@@ -4,6 +4,8 @@ import { getEvent } from '../../util/Events'
 import { EventMetaData, EventMetaDataProps, EventProps } from './type'
 import { openGraphBasicFields, openGraphImage } from '../../shared-metadata'
 import parse from 'html-react-parser';
+import { parseDateRange } from '../Events';
+import styles from './style.module.scss'
 
 /**
  * Generates the meta data for the Event
@@ -44,24 +46,13 @@ export default async function Event({
   }
 
   return (
-  <div>
+  <div className={styles.event}>
     <h1>{event.title}</h1>
-    <div>
-      <label>Where</label>
+    <div className={styles.subHeader}>
       <p>{event.where}</p>
+      <p>{parseDateRange(event.start,event.end)}</p>
     </div>
-    <div>
-      <label>Start</label>
-      <p>{event.start}</p>
-    </div>
-    <div>
-      <label>End</label>
-      <p>{event.end}</p>
-    </div>
-    <div>
-      <label>Description</label>
-      {isHTML(event.description) ? parse(event.description) : <p>{event.description}</p>}
-    </div>
+    {isHTML(event.description) ? parse(event.description) : <p>{event.description}</p>}
   </div>
   )
 }
