@@ -6,6 +6,7 @@ export interface Event {
   title?: string,
   eventType?: EventType,
   where?: string
+  images?: string[]
 }
 
 export interface EventsQuery {

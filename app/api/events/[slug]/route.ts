@@ -32,7 +32,15 @@ export async function GET(request: Request): Promise<NextResponse<APIResponse<Ev
   });
   try{
     const dbRes = await docClient.send(command);
+    let _images = undefined
+    if (dbRes.Item.images !== undefined) {
+      _images = []
+      for(const i of dbRes.Item.images) _images.push(i)
+    }
+
     const item = dbRes.Item as Event
+    item.images = _images
+
     const res: APIResponse<Event> = {
       success: true,
       message: 'Retireved the Event sucessfully',
