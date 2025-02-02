@@ -2,8 +2,7 @@
 import './globals.scss'
 import styles from './styles.module.scss'
 import { openGraphImage, openGraphBasicFields} from './shared-metadata'
-import React from "react"
-import { playfair_display } from './fonts'
+import React, { JSX } from "react"
 import SubHeader from './components/SubHeader'
 
 const title = 'Home'

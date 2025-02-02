@@ -9,16 +9,16 @@
 
   h2{
     text-transform: capitalize;
-    color: $surface-very-dark;
+    color: $surface-6;
     font-size: calc(8px + 1.6vw);
     font-weight: 400;
     margin: 0;
-    font-family: var(--font-playfair-display);
+    font-family: var(--font-inconsolata);
   }
   p{
     font-size: calc(6px + 1.5vw);
     margin: 0 1em 0 1em;
     padding: 0;
-    color: $secondary-dark;
+    color: $secondary-1;
   }
 }

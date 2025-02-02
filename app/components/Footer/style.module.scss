@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   padding: 30px 15px;
-  background-color: $surface;
-  border-top: 1px solid $surface-medium;
+  background-color: $surface-0;
+  border-top: 1px solid $surface-3;
   gap: 1em
 
 }
@@ -35,13 +35,13 @@
     font-size: 12px;
     font-weight: 400;
     margin: 0;
-    font-family: var(--font-playfair-display);
-    color: $surface-dark;
+    font-family: var(--font-inconsolata);
+    color: $surface-5;
   }
   p{
     font-size: 12px;
     margin: 0 1em 0 1em;
     padding: 0;
-    color: $surface-dark;
+    color: $surface-5;
   }
 }

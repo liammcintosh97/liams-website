@@ -1,9 +1,9 @@
 /** @module Nav */
 import Link from 'next/link'
-import React from 'react'
+import React, { JSX } from 'react'
 import styles from './style.module.scss'
 import Icon from '../Icon'
-import { oswald } from '../../fonts'
+import { inconsolata } from '../../fonts'
 
 /**
  * The Nav component
@@ -25,19 +25,19 @@ function Nav(): JSX.Element{
             </Link>
           </li>
           <li>
-            <Link className={oswald.className} href={`/employment`}>Employment</Link>
+            <Link className={inconsolata.className} href={`/employment`}>Employment</Link>
           </li>
           <li>
-            <Link className={oswald.className} href={`/projects`}>Projects</Link>
+            <Link className={inconsolata.className} href={`/projects`}>Projects</Link>
           </li>
           <li>
-            <Link className={oswald.className} href={`/certificates`}>Certificates</Link>
+            <Link className={inconsolata.className} href={`/certificates`}>Certificates</Link>
           </li>
           <li>
-            <Link className={oswald.className} href={`/acknowledgements`}>Acknowledgements</Link>
+            <Link className={inconsolata.className} href={`/acknowledgements`}>Acknowledgements</Link>
           </li>
           <li>
-            <Link className={oswald.className} href={`/about-me`}>About Me</Link>
+            <Link className={inconsolata.className} href={`/about-me`}>About Me</Link>
           </li>
         </ul>
       </nav>

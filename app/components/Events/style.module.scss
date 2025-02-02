@@ -9,11 +9,11 @@
 
     li{
       &::marker {
-        color: $primary;
+        color: $primary-0;
       }
 
       &:hover::marker{
-        color: $secondary-dark
+        color: $secondary-1
       }
 
       &:not(:last-child){
@@ -21,7 +21,7 @@
       }
 
       a:hover{
-        color: $surface-very-dark;
+        color: $surface-6;
       }
     }
   }
@@ -45,7 +45,7 @@
 }
 
 .eventDate{
-  color: $surface-dark;
+  color: $surface-5;
   font-size: 12px;
   margin: 0px;
   font-weight: 400;

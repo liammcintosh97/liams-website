@@ -1,13 +1,8 @@
-import { Oswald, Playfair_Display } from 'next/font/google'
- 
-export const oswald = Oswald({
+import { Inconsolata } from 'next/font/google'
+
+export const inconsolata = Inconsolata({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-oswald'
+  variable: '--font-inconsolata'
 })
 
-export const playfair_display = Playfair_Display({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-playfair-display'
-})

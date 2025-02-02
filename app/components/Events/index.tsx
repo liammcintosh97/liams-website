@@ -3,7 +3,7 @@ import Link from "next/link"
 import { getEvents } from "../../util/Events"
 import { EventsProps } from "./type"
 import styles from './style.module.scss'
-import { oswald, playfair_display } from "../../fonts"
+import { JSX } from "react"
 
 /**
  * Renders all the Events
